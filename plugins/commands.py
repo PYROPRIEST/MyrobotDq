@@ -88,12 +88,10 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-                    InlineKeyboardButton('Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ💕', url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+                    InlineKeyboardButton('Movie 𝖦𝗋𝗈𝗎𝗉🤠', url='https://t.me/wudixh')
                 ],[
-                    InlineKeyboardButton('Movie 𝖦𝗋𝗈𝗎𝗉', url='https://t.me/wudixh')
-                ],[
-                    InlineKeyboardButton('𝖧𝖾𝗅𝗉', callback_data='help'),
-                    InlineKeyboardButton('𝖠𝖻𝗈𝗎𝗍', callback_data='abt')
+                    InlineKeyboardButton('𝖧𝖾𝗅𝗉😏', callback_data='help'),
+                    InlineKeyboardButton('𝖠𝖻𝗈𝗎𝗍🤗', callback_data='abt')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
