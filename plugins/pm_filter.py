@@ -408,12 +408,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":
         buttons = [[
-                    InlineKeyboardButton('Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ💕', url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+                    InlineKeyboardButton('👀Movie 𝖦𝗋𝗈𝗎𝗉', url='https://t.me/pirate_cinemas_group')
                 ],[
-                    InlineKeyboardButton('Movie 𝖦𝗋𝗈𝗎𝗉', url='https://t.me/wudixh')
-                ],[
-                    InlineKeyboardButton('𝖧𝖾𝗅𝗉', callback_data='help'),
-                    InlineKeyboardButton('𝖠𝖻𝗈𝗎𝗍', callback_data='abt')
+                    InlineKeyboardButton('𝖧𝖾𝗅𝗉😏', callback_data='help'),
+                    InlineKeyboardButton('𝖠𝖻𝗈𝗎𝗍🤗', callback_data='abt')
                 ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -424,11 +422,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer('Piracy Is Crime')
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('M Filter', callback_data='manuelfilter'),
-            InlineKeyboardButton('A Filter', callback_data='autofilter')
-        ], [
-            InlineKeyboardButton('Connection', callback_data='coct'),
-            InlineKeyboardButton('Extra Mods', callback_data='extra')
+            InlineKeyboardButton('Man Filter', callback_data='manuelfilter'),
+            InlineKeyboardButton('Auto Filter', callback_data='autofilter')
         ], [
             InlineKeyboardButton('Home', callback_data='start'),
             InlineKeyboardButton('Status', callback_data='stats')
@@ -441,7 +436,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('Updates', url='https://t.me/wudixh13/4'),
+            InlineKeyboardButton('Updates', url='https://t.me/the_aecr'),
             InlineKeyboardButton('Source', callback_data='source')
         ], [
             InlineKeyboardButton('Home', callback_data='start'),
@@ -711,7 +706,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>Results Available...</b>"
+        cap = f"<b>🎬 Tɪᴛᴛʟᴇ : <b><i>{search}</i></b>\n\n🗣 Rᴇqᴜᴇꜱᴛᴇᴅ By : <b><i>{message.from_user.mention}</i></b>\n👥 Uᴩʟᴏᴀᴅᴇᴅ By : <b><i>{message.chat.title}</i></b>\n\n📪 Yᴏᴜʀ Fɪʟᴇꜱ Iꜱ Rᴇᴀᴅy Nᴏᴡ👇👇</b>"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
