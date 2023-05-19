@@ -42,15 +42,13 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-                    InlineKeyboardButton('Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ💕', url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+                    InlineKeyboardButton('Movie 𝖦𝗋𝗈𝗎𝗉🤠', url='https://t.me/wudixh')
                 ],[
-                    InlineKeyboardButton('Movie 𝖦𝗋𝗈𝗎𝗉', url='https://t.me/wudixh')
-                ],[
-                    InlineKeyboardButton('𝖧𝖾𝗅𝗉', callback_data='help'),
-                    InlineKeyboardButton('𝖠𝖻𝗈𝗎𝗍', callback_data='abt')
+                    InlineKeyboardButton('𝖧𝖾𝗅𝗉😏', callback_data='help'),
+                    InlineKeyboardButton('𝖠𝖻𝗈𝗎𝗍🤗', callback_data='abt')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        m=await message.reply_sticker("CAACAgUAAxkBAAIuc2OxMvp4oKa3eqg6zBTCZZdtxFV3AAIvAAPhAAEBGxa4Kik7WjyMHgQ")
+        m=await message.reply_sticker("CAACAgUAAxkBAAEI9c5kXmgmJZvIC3UWWioAARNk6Ni2hRsAAlcIAAIDfPlWfk3yxcsv34ovBA")
         await asyncio.sleep(1)
         await m.delete()
         await message.reply_photo(
