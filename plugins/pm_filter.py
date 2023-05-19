@@ -408,7 +408,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":
         buttons = [[
-                    InlineKeyboardButton('👀Movie 𝖦𝗋𝗈𝗎𝗉', url='https://t.me/pirate_cinemas_group')
+                    InlineKeyboardButton('Movie 𝖦𝗋𝗈𝗎𝗉🤠', url='https://t.me/pirate_cinemas_group')
                 ],[
                     InlineKeyboardButton('𝖧𝖾𝗅𝗉😏', callback_data='help'),
                     InlineKeyboardButton('𝖠𝖻𝗈𝗎𝗍🤗', callback_data='abt')
@@ -639,7 +639,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"📁[{get_size(file.file_size)}] 🍿{file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
